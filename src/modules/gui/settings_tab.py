@@ -46,6 +46,10 @@ SETTING_SECTIONS = [
         ("abs_amp", "Rumble strength", 0, 255, ""),
     ]),
     ("Redline (rev limiter) buzz", [
+        ("enable_dynamic_redline", "Auto-detect true redline", None, None, "Dynamically detects rev limiter instead of using dashboard max RPM."),
+        ("redline_debug_print", "Print detection debug info", None, None, "Outputs redline detection state changes to the console."),
+        ("redline_sample_count", "Samples required to lock", 2, 10, "Number of valid peaks needed to lock the true redline."),
+        ("redline_rpm_tolerance", "RPM clustering tolerance", 50.0, 600.0, "Max RPM difference to consider peaks as the same redline."),
         ("rev_limit_ratio", "Fire near redline at", 0.0, 1.0, ""),
         ("rev_limit_freq", "Buzz speed (Hz)", 0, 255, ""),
         ("rev_limit_amp", "Buzz strength", 0, 255, ""),
@@ -62,6 +66,16 @@ SETTING_SECTIONS = [
         ("gear_shift_amp", "Thump strength", 0, 255, ""),
         ("gear_shift_duration_ms", "Thump length (ms)", 0.0, 2000.0, ""),
     ]),
+    ("LED Shift Light", [
+        ("enable_lighting", "Enable shift light", None, None, ""),
+        ("enable_lightbar", "Enable LightBar", None, None, ""),
+        ("enable_player_led", "Enable Player LED", None, None, ""),
+        ("enable_mic_led", "Enable Mic LED", None, None, ""),
+        ("light_green_pct", "Green zone threshold", 0.0, 1.0, ""),
+        ("light_orange_pct", "Orange zone threshold", 0.0, 1.0, ""),
+        ("light_red_pct", "Red zone threshold", 0.0, 1.0, ""),
+        ("light_flash_pct", "Flash threshold", 0.0, 1.0, ""),
+    ]),
 ]
 
 SYSTEM_SECTIONS = [
@@ -76,10 +90,6 @@ SYSTEM_SECTIONS = [
     ("Forza telemetry (applies on next launch)", [
         ("udp_port", "UDP port", 1, 65535,
          "In Forza HUD: host 127.0.0.1 (try ::1 if it fails)."),
-        ("udp_forward", "Forward telemetry", None, None,
-         "Mirror every received packet to another app (e.g. SimHub) without taking the port from it."),
-        ("udp_forward_to", "Forward to", None, None,
-         "host:port targets, comma-separated. Default 127.0.0.1:5301."),
     ]),
     ("Startup pulse", [
         ("startup_pulse_force", "Startup buzz strength", 0, 255, ""),
