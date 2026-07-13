@@ -32,6 +32,10 @@ STRINGS = {
     "Wheelspin buzz": "车轮打滑震动",
     "Idle buzz": "怠速震动",
     "Throttle stiffness": "油门阻力",
+    "LED Lighting": "LED 灯效",
+    "LightBar": "RGB灯带",
+    "Player LED": "玩家 LED",
+    "ABS Light": "ABS 指示灯",
 
     # --- settings tab sections ---
     "Pedal dead zones": "踏板死区",
@@ -43,7 +47,7 @@ STRINGS = {
     "Wheelspin buzz": "车轮打滑震动",
     "Idle buzz": "怠速震动",
     "Gear shift thump": "换挡冲击",
-    "LED Shift Light": "LED 换挡灯", # 新增区域标题
+    "LED Shift Light": "LED 换挡灯", 
 
     # --- settings tab fields ---
     "Gas trigger dead zone": "油门扳机死区",
@@ -72,10 +76,6 @@ STRINGS = {
     "Print detection debug info": "打印探测调试信息",
     "Samples required to lock": "锁定所需样本数",
     "RPM clustering tolerance": "RPM 样本容差",
-    "Enable shift light": "启用换挡灯(全部)",
-    "Enable LightBar": "启用灯带 (LightBar)",
-    "Enable Player LED": "启用玩家LED",
-    "Enable Mic LED": "启用麦克风LED",
     "Green zone threshold": "绿区阈值",
     "Orange zone threshold": "橙区阈值",
     "Red zone threshold": "红区阈值",

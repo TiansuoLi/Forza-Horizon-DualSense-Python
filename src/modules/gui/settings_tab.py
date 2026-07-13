@@ -67,10 +67,6 @@ SETTING_SECTIONS = [
         ("gear_shift_duration_ms", "Thump length (ms)", 0.0, 2000.0, ""),
     ]),
     ("LED Shift Light", [
-        ("enable_lighting", "Enable shift light", None, None, ""),
-        ("enable_lightbar", "Enable LightBar", None, None, ""),
-        ("enable_player_led", "Enable Player LED", None, None, ""),
-        ("enable_mic_led", "Enable Mic LED", None, None, ""),
         ("light_green_pct", "Green zone threshold", 0.0, 1.0, ""),
         ("light_orange_pct", "Orange zone threshold", 0.0, 1.0, ""),
         ("light_red_pct", "Red zone threshold", 0.0, 1.0, ""),

@@ -90,7 +90,19 @@ def run(ds, listener, s, stop_event=None):
 
         if hasattr(ds, "set_lightbar"):
             try:
-                led_result = lighting.update(t, now, dsx_mode=dsx_mode)
+                # 计算 ABS 是否激活（复用 effects.py 中相同的判断条件）
+                abs_active = (
+                    getattr(s, "enable_abs", False)
+                    and t["brake"] >= max(1, getattr(s, "abs_brake_threshold", 0))
+                    and t["speed"] >= getattr(s, "abs_min_speed_kmh", 0)
+                    and (
+                        max(abs(t[f"tire_slip_ratio_{w}"]) for w in ("fl","fr","rl","rr"))
+                            >= getattr(s, "abs_slip_ratio_threshold", 999)
+                        or max(abs(t[f"tire_combined_slip_{w}"]) for w in ("fl","fr","rl","rr"))
+                            >= getattr(s, "abs_combined_slip_threshold", 999)
+                    )
+                )
+                led_result = lighting.update(t, now, dsx_mode=dsx_mode, abs_active=abs_active)
                 if led_result is not None:
                     (r, g, b), player_layout, mic_state = led_result
                     

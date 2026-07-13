@@ -32,6 +32,10 @@ STRINGS = {
     "Wheelspin buzz": "輪胎打滑震動",
     "Idle buzz": "怠速震動",
     "Throttle stiffness": "油門阻力",
+    "LED Lighting": "LED 燈效",
+    "LightBar": "燈條",
+    "Player LED": "玩家 LED",
+    "ABS Light": "ABS 指示燈",
 
     # --- settings tab sections ---
     "Pedal dead zones": "踏板死區",
@@ -74,10 +78,6 @@ STRINGS = {
     "Samples required to lock": "鎖定所需樣本數",
     "RPM clustering tolerance": "RPM 聚類容差",
     # === 新增：LED 換檔燈設定 ===
-    "Enable shift light": "啟用換檔燈（All）",
-    "Enable LightBar": "啟用燈條 (LightBar)",
-    "Enable Player LED": "啟用玩家 LED",
-    "Enable Mic LED": "啟用麥克風 LED",
     "Green zone threshold": "綠區閾值",
     "Orange zone threshold": "橙區閾值",
     "Red zone threshold": "紅區閾值",
