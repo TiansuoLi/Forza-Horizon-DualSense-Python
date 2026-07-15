@@ -58,7 +58,7 @@ class Settings:
     # MARK: R2 rev limiter
     # Vibrates when rpm/max_rpm exceeds the ratio; brief hold smooths rpm bounce.
     enable_rev_limiter: bool = True
-    rev_limit_ratio: float = 0.955             # fraction of max_rpm to fire at
+    rev_limit_ratio: float = 0.95             # fraction of max_rpm to fire at
     rev_limit_freq: int = 25                  # distinct from gravel/dirt drift (15/45 Hz)
     rev_limit_amp: int = 30                   # stronger than any drift surface so the warning stands out
     rev_limit_hold_ms: float = 105.0          # min on-time per trigger
@@ -130,11 +130,11 @@ class Settings:
     enable_mic_led: bool = True 
     light_green_pct: float = 0.79   
     light_orange_pct: float = 0.88  
-    light_red_pct: float = 0.93     
-    light_flash_pct: float = 0.96   
+    light_red_pct: float = 0.925     
+    light_flash_pct: float = 0.95   
 
     enable_dynamic_redline: bool = True
     redline_debug_print: bool = False       # Print detector debug info to console
-    redline_sample_count: int = 5           # Minimum valid samples required to lock redline
-    redline_rpm_tolerance: float = 330.0    # RPM tolerance for clustering (values within this range are treated as the same rev-limiter event)
+    redline_sample_count: int = 4           # Minimum valid samples required to lock redline
+    redline_rpm_tolerance: float = 210.0    # RPM tolerance for clustering (values within this range are treated as the same rev-limiter event)
 
